@@ -21,6 +21,7 @@ requirements:
     run:
         - python
         - enum34  # [py2k]
+        - setuptools
 
 test:
     imports:
