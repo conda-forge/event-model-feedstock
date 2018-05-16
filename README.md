@@ -14,14 +14,16 @@ Summary: data model for event-based data collection and analysis
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/event-model-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/event-model-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/event-model-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/event-model-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/event-model-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/event-model-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/event-model-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/event-model-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/event-model-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/event-model-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/event-model-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/event-model-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/event-model/badges/version.svg)](https://anaconda.org/conda-forge/event-model)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/event-model/badges/downloads.svg)](https://anaconda.org/conda-forge/event-model)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-event--model-green.svg)](https://anaconda.org/conda-forge/event-model) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/event-model.svg)](https://anaconda.org/conda-forge/event-model) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/event-model.svg)](https://anaconda.org/conda-forge/event-model) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/event-model.svg)](https://anaconda.org/conda-forge/event-model) |
 
 Installing event-model
 ======================
