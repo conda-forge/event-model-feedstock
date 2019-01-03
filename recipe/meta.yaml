@@ -22,6 +22,7 @@ requirements:
         - python
         - enum34  # [py2k]
         - setuptools
+        - jsonschema
 
 test:
     imports:
