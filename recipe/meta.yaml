@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.7.0" %}
 
 package:
     name: event-model
@@ -7,7 +7,7 @@ package:
 source:
     url: https://github.com/NSLS-II/event-model/archive/v{{ version }}.tar.gz
     fn: event-model-v{{version}}.tar.gz
-    sha256: d1a1fbb4076a8387bfd96f35f3acc97f7b1ef8cd31a7f4359ebc9a2536c715a7
+    sha256: d82452106486cb405c3415e34a141fea952336a5a14ae76b99cc944e68b4fd69
 
 build:
     number: 1000
