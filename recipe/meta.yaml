@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.8.3" %}
 
 package:
     name: event-model
@@ -7,10 +7,10 @@ package:
 source:
     url: https://github.com/NSLS-II/event-model/archive/v{{ version }}.tar.gz
     fn: event-model-v{{version}}.tar.gz
-    sha256: 0ec24e372c5207108527545f54da82c274e9843f6da2594bf59ad2e07e7907d5
+    sha256: ea9a6006fa95a431a2f3b2618320e26cd146b19f11112a88d3a9803b88991f56
 
 build:
-    number: 1 
+    number: 0
     script: python setup.py install --single-version-externally-managed --record=record.txt
     noarch: python
 
