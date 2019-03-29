@@ -13,15 +13,15 @@ build:
   number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   noarch: python
+  skip: True  # [py<3.6]
 
 requirements:
   build:
-    - python >=3.6
-    - setuptools
+    - python
+    - pip
 
   run:
-    - python >=3.6
-    - setuptools
+    - python
     - jsonschema
     - numpy
 
