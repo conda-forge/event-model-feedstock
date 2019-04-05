@@ -1,42 +1,39 @@
 {% set version = "1.8.3" %}
 
 package:
-    name: event-model
-    version: {{ version }}
+  name: event-model
+  version: {{ version }}
 
 source:
-    url: https://github.com/NSLS-II/event-model/archive/v{{ version }}.tar.gz
-    fn: event-model-v{{version}}.tar.gz
-    sha256: ea9a6006fa95a431a2f3b2618320e26cd146b19f11112a88d3a9803b88991f56
+  url: https://github.com/NSLS-II/event-model/archive/v{{ version }}.tar.gz
+  fn: event-model-v{{version}}.tar.gz
+  sha256: ea9a6006fa95a431a2f3b2618320e26cd146b19f11112a88d3a9803b88991f56
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record=record.txt
-    noarch: python
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
 
 requirements:
-    build:
-        - python >=3.6
-        - setuptools
-
-    run:
-        - python >=3.6
-        - setuptools
-        - jsonschema
-        - numpy
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
+    - jsonschema
+    - numpy
 
 test:
-    imports:
-        - event_model
+  imports:
+    - event_model
 
 about:
-    home: https://github.com/NSLS-II/event-model
-    license: BSD 3-Clause
-    summary: data model for event-based data collection and analysis
+  home: https://github.com/NSLS-II/event-model
+  license: BSD 3-Clause
+  summary: data model for event-based data collection and analysis
 
 extra:
-    recipe-maintainers:
-        - ericdill
-        - licode
-        - tacaswell
-        - CJ-Wright
+  recipe-maintainers:
+    - CJ-Wright
+    - mrakitin
+    - tacaswell
