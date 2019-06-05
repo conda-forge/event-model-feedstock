@@ -7,7 +7,7 @@ package:
 source:
   url: https://github.com/NSLS-II/event-model/archive/v{{ version }}.tar.gz
   fn: event-model-v{{version}}.tar.gz
-  sha256: ee2b6957703c623fb2b49bb4dbd6c2146d63d31a57d5fb6e2965d2cf13c6510a
+  sha256: 75ff3a60d71cff147f825af8b0b2fc0535b38a62939ce7bd21e72dd4a40ee7ef
 
 build:
   number: 0
@@ -37,3 +37,4 @@ extra:
     - CJ-Wright
     - mrakitin
     - tacaswell
+    - danielballan
