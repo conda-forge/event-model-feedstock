@@ -1,13 +1,13 @@
 About event-model
 =================
 
-Home: https://github.com/NSLS-II/event-model
+Home: https://github.com/bluesky/event-model
 
 Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: data model for event-based data collection and analysis
+Summary: Data model for event-based data collection and analysis
 
 
 
@@ -116,8 +116,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@CJ-Wright](https://github.com/CJ-Wright/)
-* [@danielballan](https://github.com/danielballan/)
-* [@mrakitin](https://github.com/mrakitin/)
-* [@tacaswell](https://github.com/tacaswell/)
+* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 
