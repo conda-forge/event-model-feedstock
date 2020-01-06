@@ -116,5 +116,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
+* [@danielballan](https://github.com/danielballan/)
+* [@mrakitin](https://github.com/mrakitin/)
+* [@stuartcampbell](https://github.com/stuartcampbell/)
+* [@tacaswell](https://github.com/tacaswell/)
 
