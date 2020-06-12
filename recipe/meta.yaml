@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://github.com/bluesky/event-model
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Data model for event-based data collection and analysis
 
