@@ -5,11 +5,9 @@ Home: https://github.com/bluesky/event-model
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/event-model-feedstock/blob/master/LICENSE.txt)
 
 Summary: Data model for event-based data collection and analysis
-
-
 
 Current build status
 ====================
