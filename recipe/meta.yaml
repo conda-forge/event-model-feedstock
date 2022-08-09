@@ -23,6 +23,7 @@ requirements:
     - python >=3.6
     - jsonschema
     - numpy
+    - setuptools  # provides 'pkg_resources'
 
 test:
   requires:
@@ -44,3 +45,4 @@ extra:
     - mrakitin
     - stuartcampbell
     - tacaswell
+    - gwbischof
