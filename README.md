@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@danielballan](https://github.com/danielballan/)
+* [@gwbischof](https://github.com/gwbischof/)
 * [@mrakitin](https://github.com/mrakitin/)
 * [@stuartcampbell](https://github.com/stuartcampbell/)
 * [@tacaswell](https://github.com/tacaswell/)
