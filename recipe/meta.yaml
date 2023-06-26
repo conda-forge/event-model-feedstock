@@ -27,6 +27,7 @@ requirements:
 
 test:
   requires:
+    - pydantic
     - pytest
   imports:
     - event_model
