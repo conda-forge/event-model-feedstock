@@ -1,6 +1,6 @@
 {% set name = "event-model" %}
-{% set version = "1.19.2" %}
-{% set sha256 = "864dbac72be73c7e5a5cf61cd00f366b93462d142fcd59154c22fdf0ad96606e" %}
+{% set version = "1.19.5" %}
+{% set sha256 = "a785c952f899fca1c19ef52a7c6bcd676de1bb1fd994a7dc95d0cd87c109f339" %}
 
 package:
   name: {{ name|lower }}
