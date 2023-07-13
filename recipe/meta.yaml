@@ -17,18 +17,17 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - jsonschema
     - numpy
-    - setuptools  # provides 'pkg_resources'
 
 test:
   requires:
     - pytest
-    - pydantic
+    - pydantic <2.0
   imports:
     - event_model
   commands:
