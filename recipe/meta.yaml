@@ -31,6 +31,7 @@ test:
   imports:
     - event_model
   commands:
+    - python cp_schemas.py
     - pytest --pyargs event_model.tests
 
 about:
