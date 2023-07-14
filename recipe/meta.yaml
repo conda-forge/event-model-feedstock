@@ -31,7 +31,6 @@ test:
   imports:
     - event_model
   commands:
-    - python -c "import event_model; import pathlib; import shutil; sourcedir=pathlib.Path(event_model.__file__).parent; shutil.copytree(sourcedir, '/event_model')"
     - pytest --pyargs event_model.tests
 
 about:
