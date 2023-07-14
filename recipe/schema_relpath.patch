@@ -6,7 +6,7 @@ index 5d2f4b3..9555128 100644
      import json
      import os
 
-* from event_model import SCHEMA_PATH
+-    from event_model import SCHEMA_PATH
 +    import event_model
      from event_model.documents import (
          Datum,
@@ -15,7 +15,7 @@ index 5d2f4b3..9555128 100644
          StreamResource,
      ]
 
-* SCHEMA_PATH = "event_model/" + SCHEMA_PATH
+-    SCHEMA_PATH = "event_model/" + SCHEMA_PATH
 +    SCHEMA_PATH = event_model.__path__[0] + "/schemas/"
 
      @pytest.mark.parametrize("typed_dict_class", typed_dict_class_list)
