@@ -1,6 +1,6 @@
 {% set name = "event-model" %}
-{% set version = "1.19.2" %}
-{% set sha256 = "864dbac72be73c7e5a5cf61cd00f366b93462d142fcd59154c22fdf0ad96606e" %}
+{% set version = "1.19.6" %}
+{% set sha256 = "3f3d765348cd815abe0a9f7940ffd4c93d2b476a2e5ac8810987b01fc0b88a74" %}
 
 package:
   name: {{ name|lower }}
@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - schema_relpath.patch
 
 build:
   noarch: python
@@ -17,17 +19,17 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - jsonschema
     - numpy
-    - setuptools  # provides 'pkg_resources'
 
 test:
   requires:
     - pytest
+    - pydantic <2.0
   imports:
     - event_model
   commands:
