@@ -1,58 +1,23 @@
-From 4987dbe8f2e74ddc86a605e3086bb0f6f66c0d52 Mon Sep 17 00:00:00 2001
-From: Clinton Roy <clintonr@ansto.gov.au>
-Date: Thu, 6 Jul 2023 19:33:00 +1000
-Subject: [PATCH 1/2] Find schema files relative to source code, this allows
- tests to be run from any directory. As this is a test, I think a little hack
- like this is fine. Going forward, I would remove SCHEMA_PATH from the API,
- and if it is used, replace it with a thin wrapper around importlib.resources
-
----
- event_model/tests/test_schema_generation.py | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
 diff --git a/event_model/tests/test_schema_generation.py b/event_model/tests/test_schema_generation.py
-index 5d2f4b39..764e13c9 100644
+index 5d2f4b3..9555128 100644
 --- a/event_model/tests/test_schema_generation.py
 +++ b/event_model/tests/test_schema_generation.py
-@@ -9,7 +9,7 @@
+@@ -9,7 +9,7 @@ if sys.version_info[:2] >= (3, 9):
      import json
      import os
- 
--    from event_model import SCHEMA_PATH
+
+* from event_model import SCHEMA_PATH
 +    import event_model
      from event_model.documents import (
          Datum,
          DatumPage,
-@@ -39,7 +39,7 @@
+@@ -39,7 +39,7 @@ if sys.version_info[:2] >= (3, 9):
          StreamResource,
      ]
- 
--    SCHEMA_PATH = "event_model/" + SCHEMA_PATH
-+    SCHEMA_PATH = event_model.__path__[0] + '/schemas/'
- 
-     @pytest.mark.parametrize("typed_dict_class", typed_dict_class_list)
-     def test_generated_json_matches_typed_dict(typed_dict_class, tmpdir):
 
-From 231658ff7b87f405b9f7ba503874608b0a6fffd1 Mon Sep 17 00:00:00 2001
-From: Clinton Roy <clintonr@ansto.gov.au>
-Date: Thu, 6 Jul 2023 20:00:12 +1000
-Subject: [PATCH 2/2] linting fix.
-
----
- event_model/tests/test_schema_generation.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/event_model/tests/test_schema_generation.py b/event_model/tests/test_schema_generation.py
-index 764e13c9..95551289 100644
---- a/event_model/tests/test_schema_generation.py
-+++ b/event_model/tests/test_schema_generation.py
-@@ -39,7 +39,7 @@
-         StreamResource,
-     ]
- 
--    SCHEMA_PATH = event_model.__path__[0] + '/schemas/'
+* SCHEMA_PATH = "event_model/" + SCHEMA_PATH
 +    SCHEMA_PATH = event_model.__path__[0] + "/schemas/"
- 
+
      @pytest.mark.parametrize("typed_dict_class", typed_dict_class_list)
      def test_generated_json_matches_typed_dict(typed_dict_class, tmpdir):
 
