@@ -1,13 +1,13 @@
 {% set name = "event-model" %}
-{% set version = "1.20.0" %}
-{% set sha256 = "2d78938b8c3f8bebdff6b4d7e23729b0fb63d5e7d0050dd7a638a5693735f143" %}
+{% set version = "1.21.0" %}
+{% set sha256 = "4c0c6ce9db71fb022f38b5ee6c0c55114851dd07bdfe08a5c54bff9317ce1446" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
