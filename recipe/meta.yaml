@@ -1,6 +1,6 @@
 {% set name = "event-model" %}
-{% set version = "1.22.3" %}
-{% set sha256 = "dd6aeb901dbb628c2b09d137b820919235bcaf22bec2ec77454e2dfdb812a854" %}
+{% set version = "1.23" %}
+{% set sha256 = "7481cc97151b3ac77b5f5c6a11daf24c9c5d56bf58c88f4318f393e9a804f598" %}
 
 package:
   name: {{ name|lower }}
@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    0001-MNT-restore-missing-__init__.py-from-tests-module.patch
 
 build:
   noarch: python
@@ -32,9 +34,11 @@ test:
     - pytest
     - pydantic >=2.6
     - python {{ python_min }}
+    - datamodel-code-generator
   imports:
     - event_model
   commands:
+    - python -m event_model.generate
     - pytest --pyargs event_model.tests
 
 about:
