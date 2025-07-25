@@ -10,7 +10,7 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    0001-MNT-restore-missing-__init__.py-from-tests-module
+    0001-MNT-restore-missing-__init__.py-from-tests-module.patch
 
 build:
   noarch: python
