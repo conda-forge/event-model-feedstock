@@ -38,6 +38,7 @@ test:
   imports:
     - event_model
   commands:
+    - python -m event_model.generate
     - pytest --pyargs event_model.tests
 
 about:
